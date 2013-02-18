@@ -17,13 +17,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self setupTextView];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)setupTextView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"html"];
+    NSString *text = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:text];
+
+    self.textView.attributedText = attributedText;
 }
 
 @end
