@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F68325316D2D6C300EEA602 /* libDTCoreText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F68324816D2D67F00EEA602 /* libDTCoreText.a */; };
+		0F68325516D2D6C900EEA602 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F68325416D2D6C900EEA602 /* libxml2.dylib */; };
+		0F68325716D2D6D200EEA602 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F68325616D2D6D200EEA602 /* ImageIO.framework */; };
+		0F68325916D2D6D800EEA602 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F68325816D2D6D800EEA602 /* QuartzCore.framework */; };
+		0F68325B16D2D6DE00EEA602 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F68325A16D2D6DE00EEA602 /* CoreText.framework */; };
+		0F68325D16D2D6E500EEA602 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F68325C16D2D6E500EEA602 /* MobileCoreServices.framework */; };
 		0FC9294F16D2D462009C94B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC9294E16D2D462009C94B8 /* UIKit.framework */; };
 		0FC9295116D2D462009C94B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC9295016D2D462009C94B8 /* Foundation.framework */; };
 		0FC9295316D2D462009C94B8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC9295216D2D462009C94B8 /* CoreGraphics.framework */; };
@@ -26,7 +32,72 @@
 		0FC9297D16D2D4FA009C94B8 /* content.html in Resources */ = {isa = PBXBuildFile; fileRef = 0FC9297C16D2D4FA009C94B8 /* content.html */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0F68324316D2D67F00EEA602 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F68323716D2D67E00EEA602 /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D6058910D05DD3D006BFB54;
+			remoteInfo = DemoApp;
+		};
+		0F68324516D2D67F00EEA602 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F68323716D2D67E00EEA602 /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A70F119B14863198009202BF;
+			remoteInfo = "Static Framework";
+		};
+		0F68324716D2D67F00EEA602 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F68323716D2D67E00EEA602 /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A70F11DE148632CD009202BF;
+			remoteInfo = "Static Library";
+		};
+		0F68324916D2D67F00EEA602 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F68323716D2D67E00EEA602 /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A788CA681486456100E1AFD9;
+			remoteInfo = UnitTest;
+		};
+		0F68324B16D2D67F00EEA602 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F68323716D2D67E00EEA602 /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7949A5814CC456000A8CCDE;
+			remoteInfo = MacUnitTest;
+		};
+		0F68324D16D2D67F00EEA602 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F68323716D2D67E00EEA602 /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7F7EFCD1573603100F5A4D0;
+			remoteInfo = "Static Library (no DTFoundation)";
+		};
+		0F68324F16D2D67F00EEA602 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F68323716D2D67E00EEA602 /* DTCoreText.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E2262DC61638331500BFDAD7;
+			remoteInfo = "Mac Framework";
+		};
+		0F68325116D2D6A600EEA602 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F68323716D2D67E00EEA602 /* DTCoreText.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A70F11DD148632CD009202BF;
+			remoteInfo = "Static Library";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0F68323716D2D67E00EEA602 /* DTCoreText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DTCoreText.xcodeproj; path = Externals/DTCoreText/DTCoreText.xcodeproj; sourceTree = "<group>"; };
+		0F68325416D2D6C900EEA602 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		0F68325616D2D6D200EEA602 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		0F68325816D2D6D800EEA602 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0F68325A16D2D6DE00EEA602 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		0F68325C16D2D6E500EEA602 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		0FC9294B16D2D462009C94B8 /* attributed-text-view.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "attributed-text-view.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC9294E16D2D462009C94B8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0FC9295016D2D462009C94B8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -57,6 +128,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F68325D16D2D6E500EEA602 /* MobileCoreServices.framework in Frameworks */,
+				0F68325B16D2D6DE00EEA602 /* CoreText.framework in Frameworks */,
+				0F68325916D2D6D800EEA602 /* QuartzCore.framework in Frameworks */,
+				0F68325716D2D6D200EEA602 /* ImageIO.framework in Frameworks */,
+				0F68325516D2D6C900EEA602 /* libxml2.dylib in Frameworks */,
+				0F68325316D2D6C300EEA602 /* libDTCoreText.a in Frameworks */,
 				0FC9294F16D2D462009C94B8 /* UIKit.framework in Frameworks */,
 				0FC9295116D2D462009C94B8 /* Foundation.framework in Frameworks */,
 				0FC9295316D2D462009C94B8 /* CoreGraphics.framework in Frameworks */,
@@ -66,9 +143,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F68323616D2D66800EEA602 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				0F68323716D2D67E00EEA602 /* DTCoreText.xcodeproj */,
+			);
+			name = Externals;
+			sourceTree = "<group>";
+		};
+		0F68323816D2D67E00EEA602 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F68324416D2D67F00EEA602 /* RTDemoApp.app */,
+				0F68324616D2D67F00EEA602 /* DTCoreText.framework */,
+				0F68324816D2D67F00EEA602 /* libDTCoreText.a */,
+				0F68324A16D2D67F00EEA602 /* UnitTest.octest */,
+				0F68324C16D2D67F00EEA602 /* MacUnitTest.octest */,
+				0F68324E16D2D67F00EEA602 /* libDTCoreText_no_DTFoundation.a */,
+				0F68325016D2D67F00EEA602 /* DTCoreText.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0FC9294216D2D462009C94B8 = {
 			isa = PBXGroup;
 			children = (
+				0F68325C16D2D6E500EEA602 /* MobileCoreServices.framework */,
+				0F68325A16D2D6DE00EEA602 /* CoreText.framework */,
+				0F68325816D2D6D800EEA602 /* QuartzCore.framework */,
+				0F68325616D2D6D200EEA602 /* ImageIO.framework */,
+				0F68325416D2D6C900EEA602 /* libxml2.dylib */,
+				0F68323616D2D66800EEA602 /* Externals */,
 				0FC9295416D2D462009C94B8 /* attributed-text-view */,
 				0FC9294D16D2D462009C94B8 /* Frameworks */,
 				0FC9294C16D2D462009C94B8 /* Products */,
@@ -141,6 +246,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0F68325216D2D6A600EEA602 /* PBXTargetDependency */,
 			);
 			name = "attributed-text-view";
 			productName = "attributed-text-view";
@@ -166,12 +272,70 @@
 			mainGroup = 0FC9294216D2D462009C94B8;
 			productRefGroup = 0FC9294C16D2D462009C94B8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0F68323816D2D67E00EEA602 /* Products */;
+					ProjectRef = 0F68323716D2D67E00EEA602 /* DTCoreText.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0FC9294A16D2D462009C94B8 /* attributed-text-view */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0F68324416D2D67F00EEA602 /* RTDemoApp.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = RTDemoApp.app;
+			remoteRef = 0F68324316D2D67F00EEA602 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0F68324616D2D67F00EEA602 /* DTCoreText.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DTCoreText.framework;
+			remoteRef = 0F68324516D2D67F00EEA602 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0F68324816D2D67F00EEA602 /* libDTCoreText.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTCoreText.a;
+			remoteRef = 0F68324716D2D67F00EEA602 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0F68324A16D2D67F00EEA602 /* UnitTest.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UnitTest.octest;
+			remoteRef = 0F68324916D2D67F00EEA602 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0F68324C16D2D67F00EEA602 /* MacUnitTest.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = MacUnitTest.octest;
+			remoteRef = 0F68324B16D2D67F00EEA602 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0F68324E16D2D67F00EEA602 /* libDTCoreText_no_DTFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libDTCoreText_no_DTFoundation.a;
+			remoteRef = 0F68324D16D2D67F00EEA602 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0F68325016D2D67F00EEA602 /* DTCoreText.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = DTCoreText.framework;
+			remoteRef = 0F68324F16D2D67F00EEA602 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0FC9294916D2D462009C94B8 /* Resources */ = {
@@ -206,6 +370,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F68325216D2D6A600EEA602 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Static Library";
+			targetProxy = 0F68325116D2D6A600EEA602 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0FC9295716D2D462009C94B8 /* InfoPlist.strings */ = {
@@ -286,10 +458,13 @@
 		0FC9297A16D2D462009C94B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "attributed-text-view/attributed-text-view-Prefix.pch";
 				INFOPLIST_FILE = "attributed-text-view/attributed-text-view-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -297,10 +472,13 @@
 		0FC9297B16D2D462009C94B8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "attributed-text-view/attributed-text-view-Prefix.pch";
 				INFOPLIST_FILE = "attributed-text-view/attributed-text-view-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -324,6 +502,7 @@
 				0FC9297B16D2D462009C94B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

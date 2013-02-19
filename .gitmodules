@@ -1,0 +1,3 @@
+[submodule "Externals/DTCoreText"]
+	path = Externals/DTCoreText
+	url = https://github.com/Cocoanetics/DTCoreText.git

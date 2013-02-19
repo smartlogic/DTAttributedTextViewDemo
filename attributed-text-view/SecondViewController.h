@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DTAttributedTextView.h"
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController <DTAttributedTextContentViewDelegate>
+
+@property (weak, nonatomic) IBOutlet DTAttributedTextView *textView;
 
 @end
