@@ -7,76 +7,42 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "SecondViewController.h"
+#import "DemoDTViewController.h"
 
 #import "DTHTMLAttributedStringBuilder.h"
 #import "DTCoreTextConstants.h"
 #import "DTLinkButton.h"
 
-@interface SecondViewController ()
+@interface DemoDTViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation DemoDTViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setupTextView];
-
-    self.textView.contentInset = UIEdgeInsetsMake(8, 8, 8, 8);
-}
-
-- (void)setupTextView
-{
+    
     NSString* filePath = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"html"];
     NSData *htmlData = [NSData dataWithContentsOfFile:filePath];
-
+    
+    // Set our builder to use the default native font face and size
     NSDictionary *builderOptions = @{
                                      DTDefaultFontFamily: @"Helvetica",
                                      DTDefaultFontSize: @"14"
-                                   };
-
+                                     };
+    
     DTHTMLAttributedStringBuilder *stringBuilder = [[DTHTMLAttributedStringBuilder alloc] initWithHTML:htmlData
                                                                                                options:builderOptions
                                                                                     documentAttributes:nil];
-
+    
     self.textView.attributedString = [stringBuilder generatedAttributedString];
-
+    
+    // Assign our delegate, this is required to handle link events
     self.textView.textDelegate = self;
-}
-
-- (void)drawInnerShadow
-{
-//    CAShapeLayer* shadowLayer = [CAShapeLayer layer];
-//    [shadowLayer setFrame:[self bounds]];
-//
-//    // Standard shadow stuff
-//    [shadowLayer setShadowColor:[[UIColor colorWithWhite:0 alpha:1] CGColor]];
-//    [shadowLayer setShadowOffset:CGSizeMake(0.0f, 0.0f)];
-//    [shadowLayer setShadowOpacity:1.0f];
-//    [shadowLayer setShadowRadius:5];
-//
-//    // Causes the inner region in this example to NOT be filled.
-//    [shadowLayer setFillRule:kCAFillRuleEvenOdd];
-//
-//    // Create the larger rectangle path.
-//    CGMutablePathRef path = CGPathCreateMutable();
-//    CGPathAddRect(path, NULL, CGRectInset(bounds, -42, -42));
-//
-//    // Add the inner path so it's subtracted from the outer path.
-//    // someInnerPath could be a simple bounds rect, or maybe
-//    // a rounded one for some extra fanciness.
-//    CGPathAddPath(path, NULL, someInnerPath);
-//    CGPathCloseSubpath(path);
-//
-//    [shadowLayer setPath:path];
-//    CGPathRelease(path);
-//    
-//    [[self layer] addSublayer:shadowLayer];
-//
-//
-
+    
+    // Without this the text goes right up to the edge
+    self.textView.contentInset = UIEdgeInsetsMake(8, 8, 8, 8);
 }
 
 #pragma mark - DTAttributedTextContentViewDelegate
@@ -89,9 +55,11 @@
     DTLinkButton *linkButton = [[DTLinkButton alloc] initWithFrame:frame];
     linkButton.URL = url;
     [linkButton addTarget:self action:@selector(linkButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-
+    
     return linkButton;
 }
+
+#pragma mark - Events
 
 - (IBAction)linkButtonClicked:(DTLinkButton *)sender
 {

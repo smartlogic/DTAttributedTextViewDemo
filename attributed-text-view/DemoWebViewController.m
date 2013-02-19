@@ -6,41 +6,39 @@
 //  Copyright (c) 2013 Tom von Schwerdtner. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "DemoWebViewController.h"
 
-@interface FirstViewController ()
+@interface DemoWebViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation DemoWebViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    [self setupTextView];
-}
-
-- (void)setupTextView
-{
+    
     NSString* filePath = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"html"];
     NSString *htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-
+    
+    // Wrap our HTML content in the default native font face and size
     NSString *wrappedHTMLString = [NSString stringWithFormat:@""
-                           "<html><head>"
-                           "<style type='text/css'>"
-                           "* { font-family: helvetica; font-size: 14px; }"
-                           "</style>"
-                           "</head><body>"
-                           "%@"                             
-                           "</body></html>"
-                           "",
-                           htmlString
-                           ];
-
+                                   "<html><head>"
+                                   "<style type='text/css'>"
+                                   "* { font-family: helvetica; font-size: 14px; }"
+                                   "</style>"
+                                   "</head><body>"
+                                   "%@"                             
+                                   "</body></html>"
+                                   "",
+                                   htmlString
+                                   ];
+    
     [self.webView loadHTMLString:wrappedHTMLString baseURL:nil];
+    
+    // Assign our delegate so we can handle opening links in Mobile Safari
     self.webView.delegate = self;
-
+    
     // Remove the shadow that is displayed when scrolling past the bounds
     for (UIView *shadowView in self.webView.scrollView.subviews) {
         if ([shadowView isKindOfClass:[UIImageView class]]) {
@@ -58,7 +56,7 @@
         [[UIApplication sharedApplication] openURL:[request URL]];
         return NO;
     }
-
+    
     return YES;
 }
 
