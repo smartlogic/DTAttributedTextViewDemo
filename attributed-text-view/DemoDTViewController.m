@@ -28,8 +28,7 @@
     
     // Set our builder to use the default native font face and size
     NSDictionary *builderOptions = @{
-                                     DTDefaultFontFamily: @"Helvetica",
-                                     DTDefaultFontSize: @"14"
+                                     DTDefaultFontFamily: @"Helvetica"
                                      };
     
     DTHTMLAttributedStringBuilder *stringBuilder = [[DTHTMLAttributedStringBuilder alloc] initWithHTML:htmlData

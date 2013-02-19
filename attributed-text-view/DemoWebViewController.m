@@ -25,7 +25,7 @@
     NSString *wrappedHTMLString = [NSString stringWithFormat:@""
                                    "<html><head>"
                                    "<style type='text/css'>"
-                                   "* { font-family: helvetica; font-size: 14px; }"
+                                   "* { font-family: helvetica; font-size: 12px; }"
                                    "</style>"
                                    "</head><body>"
                                    "%@"                             
