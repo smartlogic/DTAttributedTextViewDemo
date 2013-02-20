@@ -41,7 +41,7 @@
     self.textView.textDelegate = self;
     
     // Without this the text goes right up to the edge
-    self.textView.contentInset = UIEdgeInsetsMake(8, 8, 8, 8);
+    self.textView.contentInset = UIEdgeInsetsMake(6, 8, 8, 8);
 }
 
 #pragma mark - DTAttributedTextContentViewDelegate
@@ -64,8 +64,5 @@
 {
     [[UIApplication sharedApplication] openURL:sender.URL];
 }
-
-
-
 
 @end

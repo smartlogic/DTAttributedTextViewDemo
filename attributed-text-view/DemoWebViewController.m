@@ -8,10 +8,6 @@
 
 #import "DemoWebViewController.h"
 
-@interface DemoWebViewController ()
-
-@end
-
 @implementation DemoWebViewController
 
 - (void)viewDidLoad
@@ -36,9 +32,6 @@
     
     [self.webView loadHTMLString:wrappedHTMLString baseURL:nil];
     
-    // Assign our delegate so we can handle opening links in Mobile Safari
-    self.webView.delegate = self;
-    
     // Remove the shadow that is displayed when scrolling past the bounds
     for (UIView *shadowView in self.webView.scrollView.subviews) {
         if ([shadowView isKindOfClass:[UIImageView class]]) {
@@ -46,10 +39,13 @@
         }
     }
     
+    // Assign our delegate so we can handle opening links in Mobile Safari
+    self.webView.delegate = self;
 }
 
 #pragma mark - UIWebViewDelegate
 
+// Open external links from this UIWebView in MobileSafari
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     if(navigationType == UIWebViewNavigationTypeLinkClicked) {

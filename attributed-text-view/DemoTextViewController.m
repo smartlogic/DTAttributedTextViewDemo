@@ -11,42 +11,34 @@
 #import "DTHTMLAttributedStringBuilder.h"
 #import "DTCoreTextConstants.h"
 
-@interface DemoTextViewController ()
-
-@end
-
 @implementation DemoTextViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
     NSString* filePath = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"html"];
     NSData *htmlData = [NSData dataWithContentsOfFile:filePath];
     
-    // Set our builder to use the default native font face and size
+    // Set our builder to use the default native font face and size. We also set the
+    // DTUseiOS6Attributes boolean, which is required when using an attributed string
+    // from this builder in a native iOS view.
     NSDictionary *builderOptions = @{
-                                     DTUseiOS6Attributes: @YES,
-                                     DTDefaultFontFamily: @"Helvetica"
+                                     DTDefaultFontFamily: @"Helvetica",
+                                     DTUseiOS6Attributes: @YES
                                      };
     
     DTHTMLAttributedStringBuilder *stringBuilder = [[DTHTMLAttributedStringBuilder alloc] initWithHTML:htmlData
                                                                                                options:builderOptions
                                                                                     documentAttributes:nil];
-
+    
     self.textView.attributedText = [stringBuilder generatedAttributedString];
     
     // Assign our delegate, this is required to handle link events
     self.textView.delegate = self;
-
-    // This can be done in the storyboard, but we're doing everything else in code so we'll do it here.
-    self.textView.editable = NO;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    // Fort the sake of the demo, adjust content inset to match other tabs.
+    self.textView.contentInset = UIEdgeInsetsMake(8, 0, 0, 0);
 }
 
 @end
