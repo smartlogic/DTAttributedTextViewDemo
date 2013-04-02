@@ -8,5 +8,5 @@ You'll need to load submodules:
 ```
 $ git clone git@github.com:smartlogic/DTAttributedTextViewDemo.git
 $ cd DTAttributedTextViewDemo
-$ git submodule update --init
+$ git submodule update --init --recursive
 ```
