@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F68325316D2D6C300EEA602 /* libDTCoreText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F68324816D2D67F00EEA602 /* libDTCoreText.a */; };
 		0F68325516D2D6C900EEA602 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F68325416D2D6C900EEA602 /* libxml2.dylib */; };
 		0F68325716D2D6D200EEA602 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F68325616D2D6D200EEA602 /* ImageIO.framework */; };
 		0F68325916D2D6D800EEA602 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F68325816D2D6D800EEA602 /* QuartzCore.framework */; };
@@ -30,6 +29,7 @@
 		0FD6115C16D3BB16000715E2 /* tab_icon_dt.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FD6115916D3BB15000715E2 /* tab_icon_dt.png */; };
 		0FD6115D16D3BB16000715E2 /* tab_icon_uit.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FD6115A16D3BB15000715E2 /* tab_icon_uit.png */; };
 		0FD6115E16D3BB16000715E2 /* tab_icon_uiw.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FD6115B16D3BB16000715E2 /* tab_icon_uiw.png */; };
+		BA2EA032E66942878999D70D /* libPods-attributed-text-view.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D64A71A868946528986047E /* libPods-attributed-text-view.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +122,8 @@
 		0FD6115916D3BB15000715E2 /* tab_icon_dt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_icon_dt.png; sourceTree = "<group>"; };
 		0FD6115A16D3BB15000715E2 /* tab_icon_uit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_icon_uit.png; sourceTree = "<group>"; };
 		0FD6115B16D3BB16000715E2 /* tab_icon_uiw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_icon_uiw.png; sourceTree = "<group>"; };
+		5D64A71A868946528986047E /* libPods-attributed-text-view.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-attributed-text-view.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EC1C83C320D42F0B53BC87A /* Pods-attributed-text-view.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-attributed-text-view.xcconfig"; path = "Pods/Pods-attributed-text-view.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,10 +136,10 @@
 				0F68325916D2D6D800EEA602 /* QuartzCore.framework in Frameworks */,
 				0F68325716D2D6D200EEA602 /* ImageIO.framework in Frameworks */,
 				0F68325516D2D6C900EEA602 /* libxml2.dylib in Frameworks */,
-				0F68325316D2D6C300EEA602 /* libDTCoreText.a in Frameworks */,
 				0FC9294F16D2D462009C94B8 /* UIKit.framework in Frameworks */,
 				0FC9295116D2D462009C94B8 /* Foundation.framework in Frameworks */,
 				0FC9295316D2D462009C94B8 /* CoreGraphics.framework in Frameworks */,
+				BA2EA032E66942878999D70D /* libPods-attributed-text-view.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +175,7 @@
 				0FC9295416D2D462009C94B8 /* attributed-text-view */,
 				0FC9294D16D2D462009C94B8 /* Frameworks */,
 				0FC9294C16D2D462009C94B8 /* Products */,
+				5EC1C83C320D42F0B53BC87A /* Pods-attributed-text-view.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,6 +198,7 @@
 				0F68325C16D2D6E500EEA602 /* MobileCoreServices.framework */,
 				0F68325816D2D6D800EEA602 /* QuartzCore.framework */,
 				0FC9294E16D2D462009C94B8 /* UIKit.framework */,
+				5D64A71A868946528986047E /* libPods-attributed-text-view.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -241,9 +245,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FC9297916D2D462009C94B8 /* Build configuration list for PBXNativeTarget "attributed-text-view" */;
 			buildPhases = (
+				89854253E6054BE0B85048A2 /* Check Pods Manifest.lock */,
 				0FC9294716D2D462009C94B8 /* Sources */,
 				0FC9294816D2D462009C94B8 /* Frameworks */,
 				0FC9294916D2D462009C94B8 /* Resources */,
+				EE796F162B624D178AE37C14 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -358,6 +364,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		89854253E6054BE0B85048A2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE796F162B624D178AE37C14 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-attributed-text-view-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0FC9294716D2D462009C94B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -459,6 +498,7 @@
 		};
 		0FC9297A16D2D462009C94B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EC1C83C320D42F0B53BC87A /* Pods-attributed-text-view.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -473,6 +513,7 @@
 		};
 		0FC9297B16D2D462009C94B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EC1C83C320D42F0B53BC87A /* Pods-attributed-text-view.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
